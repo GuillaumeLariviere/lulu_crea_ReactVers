@@ -7,7 +7,7 @@ const BaseScreen = () =>{
     return(
         <>
             <CustomeNav/>
-        <main className="container">
+        <main className="container-fluid">
             <Outlet/>
         </main>
 

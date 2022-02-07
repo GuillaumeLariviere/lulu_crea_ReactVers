@@ -38,8 +38,8 @@
 .card-body span:after,.TitleCarousel span:after{
     position: absolute;
     left: 0;
-    bottom: 10px;
-    height: 2px;
+    bottom: 3px;
+    height: 3px;
     width: 100%;
     content: "";
     background:var(--primary-color);
@@ -64,8 +64,12 @@
 }
 .card-text,.TitleCarousel h1{
     font-family: 'Cookie', cursive;
-    font-size: 45px;
+    font-size: min(max(20px,2vw), 35px);
     font-weight: 600;
+    margin:0;
+}
+.TitleCarousel{
+    margin-bottom:5px;
 }
 .card-body{
     padding: 2px;

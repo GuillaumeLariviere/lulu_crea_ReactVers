@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "name":"Les Doudous",
+        "img_path":"./assets/img/BBGJJH.jpg"
+    },
+    {
+        "id":2,
+        "name":"Les Couvertures",
+        "img_path":"./assets/img/BBJXgn.jpg"
+    }, 
+    {
+        "id":3,
+        "name":"Accroches Tétines",
+        "img_path":"./assets/img/BBHmyj.jpg"
+    }, 
+    {
+        "id":4,
+        "name":"Protège Carnet",
+        "img_path":"./assets/img/BBIcl9.jpg"
+    }, 
+    {
+        "id":5,
+        "name":"Nids d'ange",
+        "img_path":"./assets/img/BBLNCq.jpg"
+    }, 
+    {
+        "id":6,
+        "name":"Sacs et Trousses",
+        "img_path":"./assets/img/BBKMBo.jpg"
+    }
+]
