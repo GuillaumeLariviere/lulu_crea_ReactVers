@@ -1,0 +1,153 @@
+:root {
+    --bg-blue: rgb(204, 227, 245);
+    --bg-green: rgb(189, 227, 216);
+    --bg-purple: rgb(212, 212, 238);
+    --bg-pink: rgb(252, 220, 225);
+    --bg-orange: rgb(252, 231, 199);
+    --bg-yellow: rgb(252, 248, 199);
+    --primary-color: rgb(1, 86, 119);
+}
+/* .container-fluid{
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+} */
+/*css pour les card HomePage*/
+.card.bg-color1,.card.bg-color2,.ContainerCarousel{
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 8px 1px #8f8f8fe6; 
+    box-shadow: 0px 0px 8px 1px #8f8f8fe6;
+    padding: 15px 25px 20px 25px;
+    align-items: flex-start;
+    -webkit-transition: opacity, 0.5s;
+    -o-transition: opacity, 0.5s;
+    transition: opacity, 0.5s;
+    opacity: .75;
+    cursor : pointer ;
+  
+}
+
+/* underline animated */
+.card-body span,.TitleCarousel span{
+    position: relative;
+    padding: 0 0 3px;
+    display: inline-block;
+    text-decoration: none ;
+    color:black;
+    background-color: transparent;
+}
+.card-body span:after,.TitleCarousel span:after{
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    height: 2px;
+    width: 100%;
+    content: "";
+    background:var(--primary-color);
+    -webkit-transition: all, 1s;
+    -o-transition: all, 1s;
+    transition: all, 1s;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+}
+/*fin underline animated*/
+.card.bg-color1{
+    background-color:var(--bg-pink);
+}
+.card.bg-color2{
+    background-color: var(--bg-blue);
+}
+
+.col-12.col-sm-6.col-mg-5.col-lg-4{
+    padding: 14px 10px 6px 10px;
+
+}
+.card-text,.TitleCarousel h1{
+    font-family: 'Cookie', cursive;
+    font-size: 45px;
+    font-weight: 600;
+}
+.card-body{
+    padding: 2px;
+   
+}
+
+/* image de la carde*/
+
+.cardimage{
+    max-width: 100%;
+    transform: translate(0%, -33%);
+    -webkit-transform: translate(0%, -33%);
+    -moz-transform: translate(0%, -33%);
+    -ms-transform: translate(0%, -33%);
+    -o-transform: translate(0%, -33%);
+}
+.imgContenaire{
+    overflow: hidden;
+    height: 240px;
+    -webkit-box-shadow: 0px 0px 8px 1px #7c7c7ce6; 
+    box-shadow: 0px 0px 8px 1px #7c7c7ce6;
+    border-radius: 5px;
+
+}
+/*css pour le caroussel HomePage*/
+
+#MonCarousel{
+    height: 636px;
+    background-color: var(--bg-green);
+    border-radius: 10px;
+}
+.ContainerCarousel{
+    padding :0;
+    background-color: var(--bg-green);
+    margin-top:10px;
+
+}
+
+
+
+
+/* Imgage du carousel*/
+
+.ContainerCarousel{
+-webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    cursor: pointer;
+    padding: 15px 25px 25px 25px;
+}
+
+.carousel-item img{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    -webkit-transform: translate(50%, -24%);
+    -ms-transform: translate(50%, -24%);
+    transform: translate(50%, -24%);
+    /* height: 100%; */
+    /* width: 100%; */
+    /* min-height: 500px; */
+    /* max-height: 500px;*/
+}
+.carousel-inner{
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 8px 1px #7c7c7ce6; 
+    box-shadow: 0px 0px 8px 1px #7c7c7ce6;
+}
+/*:hover du carousel et des card*/
+
+.card.bg-color1:hover span:after,.card.bg-color2:hover span:after,.ContainerCarousel:hover span:after{
+
+    transform: scale(1);
+}
+.card.bg-color1:hover,.card.bg-color2:hover,.ContainerCarousel:hover{
+
+    -webkit-transition: opacity, 0.5s;
+    -o-transition: opacity, 0.5s;
+    transition: opacity, 0.5s;
+    opacity: 1;
+}

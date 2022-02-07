@@ -1,0 +1,100 @@
+:root {
+    --bg-blue: rgb(204, 227, 245);
+    --bg-green: rgb(189, 227, 216);
+    --bg-purple: rgb(212, 212, 238);
+    --bg-pink: rgb(252, 220, 225);
+    --bg-orange: rgb(252, 231, 199);
+    --bg-yellow: rgb(252, 248, 199);
+    --primary-color: rgb(1, 86, 119);
+}
+
+.justify-content-start{
+    align-items: flex-start;
+}
+.navbar.navbar-light.navbar-expand-lg.bg-light{
+    border-bottom: 4px solid var(--bg-blue);
+    
+}
+.navbar-brand{
+    font-family: 'Fredericka the Great', cursive;
+    color: var(--primary-color) !important;
+    font-size: 40px;
+}
+.offcanvas-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+    text-decoration: none;
+    font-family: 'Fredericka the Great', cursive;
+    color: var(--primary-color) !important;
+}
+i.logostars svg{
+    margin-bottom: 13px;
+    font-size: 18px;
+}
+.dropdown-toggle::after{
+    border : 0;
+}
+ul.navbar-nav .nav-item{
+ margin-left: 10px;
+}
+
+.nav-item.iconNav svg ,.nav-link.dropdown-toggle.ConnectLogo svg{
+    color: var(--primary-color);
+    font-size: 20px;
+}
+.nav-link{
+    padding-bottom: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+div.offcanvas-body{
+    justify-content: space-around;
+}
+
+/*dropow icon de connection */
+
+.dropdown-menu.connectIcon.show{
+    left : -130px;
+}
+
+/* debut du underline animer sur les nav-link*/
+
+.nav-item.nav-menu span.nav-link{
+    position: relative;
+    display: inline-block;
+    text-decoration: none ;
+    background-color: transparent;
+}
+.nav-item.nav-menu span.nav-link:after{
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    height: 2px;
+    width: 100%;
+    content: "";
+    background:var(--primary-color);
+    -webkit-transition: all, 1s;
+    -o-transition: all, 1s;
+    transition: all, 1s;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+}
+
+.nav-item.nav-menu:hover span.nav-link:after{
+    transform: scale(1);
+}
+
+/*fin animated underline*/
+
+.navbar-brand:hover,.nav-link:hover{
+    cursor: pointer;
+}
+
+/*footer css*/
+
+.footerBG{
+    height: 80px;
+    background:white;
+    border-top: 4px solid var(--bg-blue);
+}
