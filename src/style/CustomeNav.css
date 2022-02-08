@@ -59,13 +59,13 @@ div.offcanvas-body{
 
 /* debut du underline animer sur les nav-link*/
 
-.nav-item.nav-menu span.nav-link{
+.nav-item.nav-menu .nav-link{
     position: relative;
     display: inline-block;
     text-decoration: none ;
     background-color: transparent;
 }
-.nav-item.nav-menu span.nav-link:after{
+.nav-item.nav-menu .nav-link:after{
     position: absolute;
     left: 0;
     bottom: 0px;
@@ -81,7 +81,7 @@ div.offcanvas-body{
     transform: scale(0);
 }
 
-.nav-item.nav-menu:hover span.nav-link:after{
+.nav-item.nav-menu:hover .nav-link:after{
     transform: scale(1);
 }
 

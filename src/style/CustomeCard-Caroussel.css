@@ -64,7 +64,7 @@
 }
 .card-text,.TitleCarousel h1{
     font-family: 'Cookie', cursive;
-    font-size: min(max(20px,2vw), 35px);
+    font-size: min(max(20px,2vw), 45px);
     font-weight: 600;
     margin:0;
 }
@@ -88,7 +88,7 @@
 }
 .imgContenaire{
     overflow: hidden;
-    height: 240px;
+    height: 250px;
     -webkit-box-shadow: 0px 0px 8px 1px #7c7c7ce6; 
     box-shadow: 0px 0px 8px 1px #7c7c7ce6;
     border-radius: 5px;
@@ -97,7 +97,7 @@
 /*css pour le caroussel HomePage*/
 
 #MonCarousel{
-    height: 636px;
+    height: 530px;
     background-color: var(--bg-green);
     border-radius: 10px;
 }

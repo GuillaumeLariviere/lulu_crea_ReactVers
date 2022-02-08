@@ -26,7 +26,7 @@ const CustomeNav = () =>{
                         <div className="col-10 col-lg-9 col-mg-8">
                             <ul className="navbar-nav flex-grow-1">
                                 <li className="nav-item nav-menu">
-                                    <Link className="nav-link" aria-current="page" to="/ContactScreen">Contact Page</Link>
+                                    <Link className="nav-link" aria-current="page" to="/ContactScreen"><span>Contact Page</span></Link>
                                 </li>
                                 <li className="nav-item nav-menu">
                                     <Link className="nav-link" to="/TopProducts">Top Produits</Link>
