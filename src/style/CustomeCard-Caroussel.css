@@ -97,7 +97,7 @@
 /*css pour le caroussel HomePage*/
 
 #MonCarousel{
-    height: 530px;
+    height: 600px;
     background-color: var(--bg-green);
     border-radius: 10px;
 }
