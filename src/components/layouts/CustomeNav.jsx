@@ -26,7 +26,7 @@ const CustomeNav = () =>{
                         <div className="col-10 col-lg-9 col-mg-8">
                             <ul className="navbar-nav flex-grow-1">
                                 <li className="nav-item nav-menu">
-                                    <Link className="nav-link" aria-current="page" to="/ContactScreen"><span>Contact Page</span></Link>
+                                    <Link className="nav-link" aria-current="page" to="/contact"><span>Contact Page</span></Link>
                                 </li>
                                 <li className="nav-item nav-menu">
                                     <Link className="nav-link" to="/TopProducts">Top Produits</Link>
@@ -57,7 +57,7 @@ const CustomeNav = () =>{
                                     </span>
                                     <ul className="dropdown-menu connectIcon" aria-labelledby="navbarDropdown">
                                         <li><Link className="dropdown-item Connecte" to="/" >Mon compte</Link></li>
-                                        <li><Link className="dropdown-item Connecte" to="/">Deconnexion</Link></li>
+                                        <li><Link className="dropdown-item Connecte" to="/logout">Deconnexion</Link></li>
                                     </ul>
                                 </li>
                             </ul>

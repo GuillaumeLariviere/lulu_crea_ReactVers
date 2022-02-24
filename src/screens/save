@@ -1,0 +1,68 @@
+  <div className="container-fluid">
+            <div className="row">
+                <div className="col-6 leftColumn">
+                    <div className="col-12">
+                        <div className="contentpage">
+                            <h1 className="FormTitle">Me Contacter</h1>
+                            <div className="contactdata d-flex">
+                                <span className='infoTitle'>
+                                    <h5 className='title d-flex'><i className="iconForm"><ImLocation2/></i> Adresse</h5>
+                                </span> 
+                                <div className ="infoForm">
+                                    530 rue du Chêne Crupeau,<br/> 59230 Saint-Amand-les-Eaux
+                                </div>
+                                <span className='infoTitle'>
+                                    <h5 className='title d-flex'><i className="iconForm"><ImPhone/></i> Tel</h5>
+                                </span> 
+                                <div className ="infoForm">
+                                    06.76.45.29.01
+                                </div>
+                                <span className='infoTitle'>
+                                    <h5 className='title d-flex'><i className="iconForm"><SiMaildotru/></i> Mail</h5>
+                                </span> 
+                                <div className ="infoForm">
+                                    lmilliez200@gmail.com
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-12">
+                        <div className="contentpage">
+                            <h1 className ="FormTitle">Par Messages</h1>
+                           <GenericForm endpoint="http://localhost5000/send">
+                                <GenericInput className="mb-3 contentForm"
+                                        name="email"
+                                        type="email"
+                                        labelText="Adresse mail"
+                                        required={true}
+                                        pattern={'^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'}
+                                        invalidText="Saisr un email valide" />
+                                <GenericInput className ="mb-3 contentForm"
+                                        name="name"
+                                        labelText="Votre Nom"
+                                        required={true}/>
+
+                                <div className="mb-3">
+                                        <label htmlFor="message" className="form-label">
+                                                Message
+                                        </label>
+                                        <textarea required
+                                                className="form-control"
+                                                id="message"
+                                                name="message"
+                                                rows="5"
+                                        ></textarea>
+                                        <div className="invalid-feedback">Saisir un message</div>
+                                </div>
+                           </GenericForm>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-6 rightColumn">
+                    <div className="contentpage">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.0002567030956!2d3.448548615697478!3d50.441095879474055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2e8c7ff5bb553%3A0x3c7817809f76a773!2s530%20Rue%20du%20Ch%C3%AAne%20Crupeau%2C%2059230%20Saint-Amand-les-Eaux!5e0!3m2!1sfr!2sfr!4v1638277249268!5m2!1sfr!2sfr"allowFullScreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </>

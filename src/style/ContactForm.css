@@ -1,0 +1,61 @@
+
+.contentPage{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px 1px #8f8f8fe6;
+    height: 99.5%;
+    margin-bottom: 5px;
+}
+
+.paddingcont{
+    padding:10px;   
+}
+.contentMap{
+    padding: 10px;
+    height: 100%;
+}
+iframe{
+    border: 2px solid var(--primary-color);
+    width: 100%;
+    height:100%;
+    box-shadow: 0px 0px 8px 1px #383737e6;
+    border-radius: 10px;
+}
+.contactRow{
+    margin-top: 5px;
+}
+.col-6.leftColumn{
+    padding-right: 5px;
+}
+.col-6.rightColumn{
+    padding-left: 5px;
+}
+.infoForm{
+    margin: 10px;
+    text-align: justify;
+}
+.contactTitle{
+    font-size:45px;
+    font-family: 'Cookie', cursive;
+    font-weight: 600;
+    margin-left : 10px
+}
+.contactData{
+    margin-left: 20px;
+}
+h5 i.iconForm{
+    color:var(--primary-color);
+   
+    
+    font-size: 20px;
+    
+}
+.iconSp{
+    background-color: var(--bg-green);
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    padding: 0px 4px 3px 4px;
+    border: 2px solid var(--primary-color);
+    text-align: center;
+}

@@ -1,5 +1,6 @@
 
 import './App.css';
+import "./helpers/string.helpers";
 import BaseScreen from './screens/BaseScreen';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import HomeScreen from './screens/HomeScreen';
