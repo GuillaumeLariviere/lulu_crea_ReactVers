@@ -3,9 +3,13 @@ import GenericInput from "../components/generics/GenericInput";
 import '../style/ContactForm.css'
 import { ImLocation2, ImPhone } from "react-icons/im";
 import { SiMaildotru } from "react-icons/si";
+import { useContext } from "react";
+import { AuthContext } from "../contexts/authContext";
 
 const ContactScreen = () => {
 
+    const {auth} =useContext(AuthContext)
+    
     return (
         <>
 
@@ -40,6 +44,9 @@ const ContactScreen = () => {
                                     <GenericInput className="mb-3 contentForm"
                                         name="email"
                                         type="email"
+                                        value={auth&&(
+                                            auth.email
+                                        )}
                                         labelText="Adresse mail"
                                         required={true}
                                         pattern={'^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'}

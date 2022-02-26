@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const CustomeCard = (props)=>{
-    const {cardClass,cardImg, cardText,cardDesc,route}= props;
+    const {cardClass,cardImg, cardText,cardDesc,route,key}= props;
 
     const inner = (
         <>

@@ -7,6 +7,7 @@ const GenericInput = (props) => {
         labelText ="",
         type ="text", 
         name,
+        value ,
         invalidText="saisie invalide",
         required,
         pattern,
@@ -26,6 +27,7 @@ const GenericInput = (props) => {
                     name={name}
                     required={required}
                     patterne={pattern}
+                    defaultValue ={value}
                 />
                 <div className="invalid-feedback">{invalidText}</div>
             </div>

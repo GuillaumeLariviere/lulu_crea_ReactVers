@@ -1,12 +1,16 @@
 import {AiTwotoneStar} from "react-icons/ai";
 import { FaShoppingBasket,FaSignInAlt,FaUserAlt } from "react-icons/fa";
 import {Link} from "react-router-dom"
+import { AuthContext } from '../../contexts/authContext';
+import React, { useContext } from "react";
+
 
 
 
 
 const CustomeNav = () =>{
 
+    const {auth} = useContext(AuthContext);
     return (
         <>
         <nav className="navbar navbar-light navbar-expand-lg bg-light">
@@ -46,20 +50,30 @@ const CustomeNav = () =>{
                         <div className="col-2">
                             <ul className="navbar-nav">
                                 <li className="nav-item iconNav">
-                                    <Link className="nav-link" to="/"><FaShoppingBasket/></Link>
+                                    <Link className="nav-link" to="/" data-bs-toggle="tooltip" data-bs-placement="bottom" title="votre panier"><FaShoppingBasket/></Link>
                                 </li>
+                                {auth.role === 0 &&(
                                 <li className="nav-item iconNav">
-                                    <Link className="nav-link" to="/"><FaSignInAlt/></Link>
+                                    <Link className="nav-link" to="/login" data-bs-toggle="tooltip" data-bs-placement="bottom-start" title="Se connecter"><FaSignInAlt/></Link>
                                 </li>
+                                )}
+
+                                {auth.role > 0 && (
+                                <>
                                 <li className="nav-item dropdown">
                                     <span className="nav-link dropdown-toggle ConnectLogo" id="navbarDropdown " role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                        <FaUserAlt/>
                                     </span>
                                     <ul className="dropdown-menu connectIcon" aria-labelledby="navbarDropdown">
-                                        <li><Link className="dropdown-item Connecte" to="/" >Mon compte</Link></li>
-                                        <li><Link className="dropdown-item Connecte" to="/logout">Deconnexion</Link></li>
+                                     
+                                            <li><Link className="dropdown-item Connecte" to="/account" >Mon compte</Link></li>
+                                            <li><Link className="dropdown-item Connecte" to="/logout">Deconnexion</Link></li>
+                                    
+                                        
                                     </ul>
                                 </li>
+                                </>
+                                )}
                             </ul>
                         </div>
                     </div>

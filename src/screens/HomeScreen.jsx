@@ -42,15 +42,17 @@ console.log(categories);
             <div className="row">
                 {categories.map((category,i)=>{
                 return (
-                <div className="col-12 col-sm-6 col-mg-5 col-lg-4" >
+                <div className="col-12 col-sm-6 col-mg-5 col-lg-4"  key ={category.id}>
                          <CustomeCard cardClass={'card bg-color'+PairOrNot(i)}
                                  cardDesc ={category.description}
                                  cardImg = {category.img_path}
                                  cardText={category.name}
-                                 route ={"/productsdetails/"+category.id}/>
+                                 route ={"/productsdetails/"+category.id}
+                                />
                 </div>
                 );
                })}
+
             </div>
         </>
     );
