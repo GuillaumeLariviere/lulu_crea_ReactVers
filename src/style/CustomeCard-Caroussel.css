@@ -80,6 +80,7 @@
 
 .cardimage{
     max-width: 100%;
+    min-height: 400px;
     transform: translate(0%, -33%);
     -webkit-transform: translate(0%, -33%);
     -moz-transform: translate(0%, -33%);
@@ -107,10 +108,6 @@
     margin-top:10px;
 
 }
-
-
-
-
 /* Imgage du carousel*/
 
 .ContainerCarousel{
@@ -127,6 +124,7 @@
 
 .carousel-item img{
     position: absolute;
+    min-height: 400px;
     top: 50%;
     right: 50%;
     -webkit-transform: translate(50%, -24%);
@@ -137,10 +135,45 @@
     /* min-height: 500px; */
     /* max-height: 500px;*/
 }
+/* .carousel-item-card{
+    position: relative;
+    top: 50%;
+    right: 50%;
+    -webkit-transform: translate(50%, -24%);
+    -ms-transform: translate(50%, -24%);
+    transform: translate(50%, -24%);
+} */
+.card{
+    display : block;
+}
 .carousel-inner{
     border-radius: 10px;
     -webkit-box-shadow: 0px 0px 8px 1px #7c7c7ce6; 
     box-shadow: 0px 0px 8px 1px #7c7c7ce6;
+}
+
+/*----------------------custome button cardCarousel------------------------------*/
+.button-container{
+    text-align: center;
+    padding : 5px;
+    display: flex;
+}
+.btn-command{
+    border-radius: 10px;
+    border: 2px solid var(--primary-color);
+    background:var(--bg-green);
+    color:var(--primary-color);
+    font-family: 'Cookie', cursive;
+    font-size:20px;
+
+}
+.btn-command:hover{
+    border : 2px solid var(--bg-green);
+    background: var(--primary-color);
+    color: var(--bg-green);
+}
+.card.bg-color1.productRef,.card.bg-color2.productRef:hover{
+    cursor: default;
 }
 /*:hover du carousel et des card*/
 

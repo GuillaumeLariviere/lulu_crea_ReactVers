@@ -33,7 +33,7 @@ const CustomeNav = () =>{
                                     <Link className="nav-link" aria-current="page" to="/contact"><span>Contact Page</span></Link>
                                 </li>
                                 <li className="nav-item nav-menu">
-                                    <Link className="nav-link" to="/TopProducts">Top Produits</Link>
+                                    <Link className="nav-link" to="/productsReference">Nos Produits Réferences</Link>
                                 </li>
                                 <li className="nav-item dropdown nav-menu">
                                     <span className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -68,8 +68,6 @@ const CustomeNav = () =>{
                                      
                                             <li><Link className="dropdown-item Connecte" to="/account" >Mon compte</Link></li>
                                             <li><Link className="dropdown-item Connecte" to="/logout">Deconnexion</Link></li>
-                                    
-                                        
                                     </ul>
                                 </li>
                                 </>

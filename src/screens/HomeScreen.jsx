@@ -2,7 +2,7 @@ import CustomeCard from "../components/layouts/CustomeCard";
 import "../style/CustomeCard-Caroussel.css"
 import { useEffect, useState } from "react";
 import CustomeCaroussel from "../components/layouts/CustomeCaroussel";
-import { Category } from "../models/category.model";
+import { category } from "../models/index";
 
 const HomeScreen = () => {
    
@@ -22,7 +22,7 @@ const [categories, setCategories] = useState([]);
 
 useEffect(()=>{
     const fetchData = async ()=> {
-        let data = Category.from(await (await fetch("/data/categories.json")).json());
+        let data = category.from(await (await fetch("http://localhost:5000/category")).json());
         setCategories(data);
     };
     fetchData().catch(console.error);
