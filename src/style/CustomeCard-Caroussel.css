@@ -64,7 +64,7 @@
 }
 .card-text,.TitleCarousel h1{
     font-family: 'Cookie', cursive;
-    font-size: min(max(20px,2vw), 45px);
+    font-size: min(max(25px,2vw), 45px);
     font-weight: 600;
     margin:0;
 }
@@ -150,6 +150,10 @@
     border-radius: 10px;
     -webkit-box-shadow: 0px 0px 8px 1px #7c7c7ce6; 
     box-shadow: 0px 0px 8px 1px #7c7c7ce6;
+}
+.refColumn{
+    padding-left: 10px ;
+    padding-right: 10px ;
 }
 
 /*----------------------custome button cardCarousel------------------------------*/

@@ -62,12 +62,14 @@ const ProductRefScreen = () => {
 
     return (
         <>
+        <div className="row refColumn">
             {categoriesListe.map((category, i) => {
                 return (
                     <>
-                    <div className="contentPage">
+
+                    <div className="contentPage mt-1">
                         <div className="paddingcont">
-                            <h1>{category.name}</h1>
+                            <h1 className="contactTitle">{category.name}</h1>
                             <div className="row">
                                 {productsListe.map((product, i) => {
                                     if (product.category_id === category.id) {
@@ -87,10 +89,11 @@ const ProductRefScreen = () => {
                             </div>
                         </div>
                     </div>
+                  
                     </>
                 )
             })}
-
+        </div>
         </>
     )
 

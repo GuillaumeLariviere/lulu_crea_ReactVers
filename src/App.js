@@ -1,4 +1,3 @@
-
 import './App.css';
 import "./helpers/string.helpers";
 import BaseScreen from './screens/BaseScreen';
@@ -11,6 +10,7 @@ import { AuthContext } from './contexts/authContext';
 import LogAndRegScreen from './screens/LogAndRegScreen';
 import LogoutScreen from './screens/LogoutScreen';
 import AccountScreen from './screens/AccountScreen';
+import LuluCestQui from './screens/LuLuCestQui';
 
 function App() {
 
@@ -21,6 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<BaseScreen/>} >
           <Route index element={<HomeScreen/>} />
+          <Route path ="/LuLuCestQui" element ={<LuluCestQui/>}/>
           <Route path="/productsReference" element={<ProductRefScreen/>}/>
           <Route path="/contact" element={<ContactScreen/>}/>
           {auth.role === 0 && (

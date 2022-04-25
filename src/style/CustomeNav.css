@@ -44,7 +44,7 @@ ul.navbar-nav .nav-item{
 }
 .nav-link{
     padding-bottom: 0;
-    font-size: 18px;
+    font-size: min(max(14px,1.4vw), 18px);
     font-weight: bold;
 }
 div.offcanvas-body{
@@ -97,4 +97,11 @@ div.offcanvas-body{
     height: 80px;
     background:white;
     border-top: 4px solid var(--bg-blue);
+}
+@media screen and (max-width : 992px ) {
+    .nav-link{
+      
+        font-size: 18px;
+      
+    }
 }
