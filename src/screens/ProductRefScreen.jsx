@@ -5,12 +5,11 @@ import "../style/CustomeCard-Caroussel.css";
 import CustomeCardMultiIgm from "../components/layouts/CustomeCardMultiImg";
 
 const ProductRefScreen = () => {
-    const [products, setProducts] = useState([]);
-    const [imgProducts, setImgProducts] = useState([]);
     const [categories, setCategories] = useState([]);
-    const categoriesRef = useRef([]);
-    const productRef = useRef([]);
-    const imgProductsRef = useRef([]);
+    const [productRef,setProducRef] = useState([]);
+    // const categoriesRef = useRef([]);
+    // const productRef = useRef([]);
+    // const imgProductsRef = useRef([]);
 
     function PairOrNot(itemNB) {
         if (itemNB % 2) {
@@ -26,38 +25,33 @@ const ProductRefScreen = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const categories = category.from(
+            const categories = (
                 await (await fetch("http://localhost:5000/category")).json()
             );
-            categoriesRef.current = categories;
+         
             setCategories(categories);
-            const products = product_reference.from(
-                await (await fetch("http://localhost:5000/product_reference")).json()
-            );
-            productRef.current = products;
+            // const products = product_reference.from(
+            //     await (await fetch("http://localhost:5000/product_reference")).json()
+            // );
+         
 
-            setProducts(products);
-            if (products.length > 0) {
-                products.forEach(async product => {
-                    const imgProducts = product_image.from(
-                        await (await fetch("http://localhost:5000/product_image")).json()
-                    );
-                    imgProductsRef.current = imgProducts.filter((img) => img.product_reference_id === +product.id);
-
-                    setImgProducts(imgProducts);
-                })
-
-
-
-                console.log(imgProducts);
-            }
-        };
+            // setProducts(products);
+            // const imgProducts = product_image.from(
+            //     await (await fetch("http://localhost:5000/product_image")).json()
+            // );
+            
+            // setImgProducts(imgProducts);
+                // console.log(imgProductListe);
+                const productRef = (await(await fetch("http://localhost:5000/product_reference?with=Product_image")).json());
+                setProducRef(productRef);
+        }
         fetchData().catch(console.error);
     }, []);
 
-    const productsListe = productRef.current;
-    const imgProductListe = imgProductsRef.current;
-    const categoriesListe = categoriesRef.current;
+    const productsListe = productRef;
+
+    const imgProductListe = productRef;
+    const categoriesListe = categories;
 
 
     return (
@@ -74,12 +68,14 @@ const ProductRefScreen = () => {
                                 {productsListe.map((product, i) => {
                                     if (product.category_id === category.id) {
                                         return (
+                                            // console.log(imgProductListe[product.id-1])
                                             <div className="col-12 col-sm-6 col-mg-5 col-lg-4" key={product.id}>
                                                 <CustomeCardMultiIgm cardClass={'card bg-color' + PairOrNot(i) + ' productRef'}
                                                     cardDesc={product.description}
-                                                    cardImg={imgProductListe}
+                                                    cardImg={product.product_imageList}
                                                     cardText={product.name}
-                                                    route={"/productsdetails/" + product.id}
+                                                    route={"/commandProduct/" + product.id}
+                                                    idCaroussel = {product.id}
                                                 />
                                             </div>
                                         );
@@ -91,7 +87,7 @@ const ProductRefScreen = () => {
                     </div>
                   
                     </>
-                )
+                );
             })}
         </div>
         </>

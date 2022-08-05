@@ -5,6 +5,7 @@
     --bg-pink: rgb(252, 220, 225);
     --bg-orange: rgb(252, 231, 199);
     --bg-yellow: rgb(252, 248, 199);
+    --box-shadow:#b1b0b0e6;
     --primary-color: rgb(1, 86, 119);
 }
 
@@ -13,11 +14,14 @@
 }
 .navbar.navbar-light.navbar-expand-lg.bg-light{
     border-bottom: 4px solid var(--bg-blue);
+    background:var(--bg-bege) !important;
+    z-index: 1;
     
 }
 .navbar-brand{
     font-family: 'Fredericka the Great', cursive;
     color: var(--primary-color) !important;
+    text-shadow: 2px 1px 1px var(--bg-blue);
     font-size: 40px;
 }
 .offcanvas-title {
@@ -25,7 +29,14 @@
     line-height: 1.5;
     text-decoration: none;
     font-family: 'Fredericka the Great', cursive;
+    text-shadow: 2px 1px 1px var(--bg-blue);
     color: var(--primary-color) !important;
+}
+.offcanvas-title h5{
+    font-size: 2.25rem;
+}
+.offcanvas-start{
+    background: var(--bg-bege);
 }
 i.logostars svg{
     margin-bottom: 13px;
@@ -59,13 +70,13 @@ div.offcanvas-body{
 
 /* debut du underline animer sur les nav-link*/
 
-.nav-item.nav-menu .nav-link{
+.nav-item.nav-menu .nav-link, .loglink{
     position: relative;
     display: inline-block;
     text-decoration: none ;
     background-color: transparent;
 }
-.nav-item.nav-menu .nav-link:after{
+.nav-item.nav-menu .nav-link:after,.loglink:after{
     position: absolute;
     left: 0;
     bottom: 0px;
@@ -81,7 +92,7 @@ div.offcanvas-body{
     transform: scale(0);
 }
 
-.nav-item.nav-menu:hover .nav-link:after{
+.nav-item.nav-menu:hover .nav-link:after,.loglink:hover:after{
     transform: scale(1);
 }
 
@@ -89,6 +100,27 @@ div.offcanvas-body{
 
 .navbar-brand:hover,.nav-link:hover{
     cursor: pointer;
+}
+.dropdown-menu{
+    padding :0 !important;
+}
+.dropDownContentLink{
+border-bottom:1px solid rgba(0, 0, 0, 0.253) ;
+padding: 5px;
+}
+.dropMenuLink,.loglink{
+    color:black;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.55);
+    font-size: min(max(14px,1.4vw), 18px);
+    font-weight: bold;
+}
+.dropDownContentLink:hover,.loglink:hover{
+    color: rgba(0, 0, 0, 0.7);
+}
+.loglink{
+    padding: 0.5rem 1rem;
+    padding-bottom: 0;
 }
 
 /*footer css*/

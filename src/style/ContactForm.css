@@ -1,14 +1,22 @@
 
 .contentPage{
-    background-color: white;
+    background-color: var(--bg-bege);
     border-radius: 10px;
-    box-shadow: 0px 0px 8px 1px #8f8f8fe6;
+    box-shadow: 0px 0px 8px 1px var(--box-shadow);
     height: 99.5%;
     margin-bottom: 5px;
+}
+.contentPage.LoginAndRegister{
+    box-shadow: 0px 0px 0px 100000px var(--bg-green);
+  background-color: var(--bg-bege);
 }
 
 .paddingcont{
     padding:10px;   
+}
+.paddingcont.LogAndReg{
+    box-shadow: 0px 0px 8px 1px var(--box-shadow);
+    border-radius: 10px;
 }
 .contentMap{
     padding: 10px;
@@ -18,7 +26,7 @@ iframe{
     border: 2px solid var(--primary-color);
     width: 100%;
     height:100%;
-    box-shadow: 0px 0px 8px 1px #383737e6;
+    box-shadow: 0px 0px 8px 1px var(--box-shadow);
     border-radius: 10px;
 }
 .contactRow{
@@ -37,8 +45,13 @@ iframe{
 .contactTitle{
     font-size:45px;
     font-family: 'Cookie', cursive;
+    text-shadow: 2px 2px 1px var(--bg-blue);
+    color:var(--primary-color);
     font-weight: 600;
-    margin-left : 10px
+    margin-left : 10px;
+}
+.contactTitle.LogReg{
+    text-align: center;
 }
 .contactData{
     margin-left: 20px;
@@ -58,4 +71,19 @@ h5 i.iconForm{
     padding: 0px 4px 3px 4px;
     border: 2px solid var(--primary-color);
     text-align: center;
+}
+.alignForm{
+    margin: 0;
+    width: 50%;
+    min-width: 313px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-45%);
+    -ms-transform: translate(-50%,-45%);
+  
+}
+label{
+    font-size: 1.25rem;
+    font-weight: 500;
 }

@@ -2,14 +2,24 @@ import {AiTwotoneStar} from "react-icons/ai";
 import { FaShoppingBasket,FaSignInAlt,FaUserAlt } from "react-icons/fa";
 import {Link} from "react-router-dom"
 import { AuthContext } from '../../contexts/authContext';
-import React, { useContext } from "react";
+import React, { useContext,useState,useEffect } from "react";
+import { category } from "../../models/index";
 
 
 
 
 
 const CustomeNav = () =>{
+    const [categories, setCategories] = useState([]);
 
+    useEffect(()=>{
+        const fetchData = async ()=> {
+            let data = category.from(await (await fetch("http://localhost:5000/category")).json());
+            setCategories(data);
+        };
+        fetchData().catch(console.error);
+    
+    },[]);
     const {auth} = useContext(AuthContext);
     return (
         <>
@@ -40,6 +50,17 @@ const CustomeNav = () =>{
                                         Boutique
                                     </span>
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        {categories.map((category)=>{
+                                            return (
+                                            <>
+                                            <Link className ="dropMenuLink" to ="/">
+                                             <div className="dropDownContentLink">
+                                                {category.name}
+                                            </div>
+                                            </Link>
+                                            </>
+                                            );
+                                        })}
                                     </ul>
                                 </li>
                                 <li className="nav-item nav-menu ">

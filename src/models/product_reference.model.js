@@ -16,6 +16,7 @@ class Product_reference extends BaseModel{
     name = "";
     description = "";
     category_id = 0;
+    Product_imageList=[];
 
 }
 module.exports = Product_reference;

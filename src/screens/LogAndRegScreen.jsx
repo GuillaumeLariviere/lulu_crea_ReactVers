@@ -11,8 +11,7 @@ const LogAndRegScreen = (props) => {
     useEffect(() => {
         {props.isRegister&&(
             loadCaptchaEnginge(2)
-        )};
-        
+        )};  
     })
     const handleSubmit = async (evt,response)=>{
         const text = await response.text();
@@ -27,67 +26,62 @@ const LogAndRegScreen = (props) => {
                 document.cookie=`auth=null;max-age=0`;
             }
         }
-
     }
     return (
         <>
-        <div className="contentPage mt-3">
-            <div className="paddingcont">
-                <h1>{props.isLogin ? "Se Connecter" : "Créer un compte"}</h1>
-                <GenericForm endpoint={'http://localhost:5000/auth/' + (props.isLogin ? "login" : "register")} 
-                            callback={handleSubmit}
-                >
-                    <GenericInput className="mb-3"
-                        name="email"
-                        type="email"
-                        labelText="Adresse mail"
-                        required={true}
-                        pattern={'^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'}
-                        invalidText="Saisr un email valide" />
-                    <GenericInput className="mb-3"
-                        name="password"
-                        type="password"
-                        labelText="Password"
-                        required={true}
-                        invalidText="Saisr un mot de passe valide" />
-                    {props.isRegister && (
-                    <>
+        <div className = "alignForm align-items-center">
+            <div className="contentPage LoginAndRegister mt-3 ">
+                <div className="paddingcont LogAndReg">
+                    <h1 className="contactTitle LogReg">{props.isLogin ? "Se Connecter" : "Créer un compte"}</h1>
+                    <GenericForm endpoint={'http://localhost:5000/auth/' + (props.isLogin ? "login" : "register")} 
+                                callback={handleSubmit}
+                    >
                         <GenericInput className="mb-3"
-                            name="password_confirm"
+                            name="email"
+                            type="email"
+                            labelText="Adresse mail"
+                            required={true}
+                            pattern={'^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'}
+                            invalidText="Saisr un email valide" />
+                        <GenericInput className="mb-3"
+                            name="password"
                             type="password"
-                            labelText="Confirm Password"
+                            labelText="Password"
                             required={true}
-                            invalidText="Saisr un mot de passe identique" />
-                            
-                        <div>
-                            <LoadCanvasTemplateNoReload />
-                        </div>
-                        <GenericInput className="mb-3"
-                            name="user_captcha_validate"
-                            type="text"
-                            labelText=""
-                            required={true}
-                            invalidText="captcha no match" />
-                    </>
-                    )}
-
-
-
-                </GenericForm>
-                <div style={{ postion: "relative", top: -40, letf: 90 }} className={props.isLogin && "ms-4"}>
-                    {props.isLogin ? (
+                            invalidText="Saisr un mot de passe valide" />
+                        {props.isRegister && (
                         <>
-                            <Link className="nav-link" to="/register"> créer un compte</Link>
-                            <Link className="nav-link" to="/renewpass"> mot de passe oublier?</Link>
+                            <GenericInput className="mb-3"
+                                name="password_confirm"
+                                type="password"
+                                labelText="Confirm Password"
+                                required={true}
+                                invalidText="Saisr un mot de passe identique" />
+                            <div>
+                                <LoadCanvasTemplateNoReload />
+                            </div>
+                            <GenericInput className="mb-3"
+                                name="user_captcha_validate"
+                                type="text"
+                                labelText=""
+                                required={true}
+                                invalidText="captcha no match" />
                         </>
-                    ) : (
-                        <Link className="nav-link" to="/login">deja un compte ? se connecter</Link>
-                    )}
- 
+                        )}
+                    </GenericForm>
+                    <div style={{ postion: "relative", top: -40, letf: 90 }} className={props.isLogin && "ms-4"}>
+                        {props.isLogin ? (
+                            <>
+                                <Link className="loglink" to="/register"> créer un compte</Link>
+                                <Link className="loglink" to="/renewpass"> mot de passe oublier?</Link>
+                            </>
+                        ) : (
+                            <Link className="loglink" to="/login">deja un compte ? se connecter</Link>
+                        )}
+                    </div>
                 </div>
             </div>
         </div>
-
         </>
     );
 };

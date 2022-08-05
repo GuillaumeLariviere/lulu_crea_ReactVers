@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const CustomeCardMultiIgm = (props) => {
-    const { cardClass, cardImg, cardText, cardDesc, route, key } = props;
+    const { cardClass, cardImg, cardText, cardDesc, route, key , idCaroussel  } = props;
     let count=0;
 
 
@@ -17,7 +17,7 @@ const CustomeCardMultiIgm = (props) => {
                     <p>{cardDesc}</p>
                 </div>
                 
-                    <div id="myCardCarousel" className=" imgContenaire carousel slide d-flex" data-bs-ride="carousel">
+                    <div id={"myCardCarousel"+idCaroussel} className=" imgContenaire carousel slide d-flex" data-bs-ride="carousel">
                         <div className="carousel-inner">
                         {cardImg.map((img)=>{
                             count ++;
@@ -28,17 +28,17 @@ const CustomeCardMultiIgm = (props) => {
                             );
                         })} 
                         </div>
-                        <button className="carousel-control-prev" type="button" data-bs-target="#myCardCarousel" data-bs-slide="prev">
+                        <button className="carousel-control-prev" type="button" data-bs-target={"#myCardCarousel"+idCaroussel} data-bs-slide="prev">
                             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span className="visually-hidden">Previous</span>
                         </button>
-                        <button className="carousel-control-next" type="button" data-bs-target="#myCardCarousel" data-bs-slide="next">
+                        <button className="carousel-control-next" type="button" data-bs-target={"#myCardCarousel"+idCaroussel} data-bs-slide="next">
                             <span className="carousel-control-next-icon" aria-hidden="true"></span>
                             <span className="visually-hidden">Next</span>
                         </button>
                     </div>
                     <div className="button-container">
-                        <button type="button" className="btn btn-command">commander ce produit</button>
+                       <Link to ={route}> <button type="button" className="btn btn-command">commander ce produit</button></Link>
                     </div>
                 </div>
 

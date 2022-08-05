@@ -6,6 +6,7 @@
     --bg-orange: rgb(252, 231, 199);
     --bg-yellow: rgb(252, 248, 199);
     --primary-color: rgb(1, 86, 119);
+    --bg-bege:#fff9ea;
 }
 /* .container-fluid{
     padding-left: 8px !important;
@@ -14,8 +15,8 @@
 /*css pour les card HomePage*/
 .card.bg-color1,.card.bg-color2,.ContainerCarousel{
     border-radius: 10px;
-    -webkit-box-shadow: 0px 0px 8px 1px #8f8f8fe6; 
-    box-shadow: 0px 0px 8px 1px #8f8f8fe6;
+    -webkit-box-shadow: 0px 0px 8px 1px var(--box-shadow); 
+    box-shadow: 0px 0px 8px 1px var(--box-shadow);
     padding: 15px 25px 20px 25px;
     align-items: flex-start;
     -webkit-transition: opacity, 0.5s;
@@ -64,7 +65,7 @@
 }
 .card-text,.TitleCarousel h1{
     font-family: 'Cookie', cursive;
-    font-size: min(max(25px,2vw), 45px);
+    font-size: min(max(31px,2vw), 45px);
     font-weight: 600;
     margin:0;
 }
@@ -90,8 +91,8 @@
 .imgContenaire{
     overflow: hidden;
     height: 250px;
-    -webkit-box-shadow: 0px 0px 8px 1px #7c7c7ce6; 
-    box-shadow: 0px 0px 8px 1px #7c7c7ce6;
+    -webkit-box-shadow: 0px 0px 8px 1px var(--box-shadow); 
+    box-shadow: 0px 0px 8px 1px var(--box-shadow);
     border-radius: 5px;
 
 }
@@ -148,8 +149,8 @@
 }
 .carousel-inner{
     border-radius: 10px;
-    -webkit-box-shadow: 0px 0px 8px 1px #7c7c7ce6; 
-    box-shadow: 0px 0px 8px 1px #7c7c7ce6;
+    -webkit-box-shadow: 0px 0px 8px 1px var(--box-shadow); 
+    box-shadow: 0px 0px 8px 1px var(--box-shadow);
 }
 .refColumn{
     padding-left: 10px ;
@@ -165,10 +166,10 @@
 .btn-command{
     border-radius: 10px;
     border: 2px solid var(--primary-color);
-    background:var(--bg-green);
     color:var(--primary-color);
     font-family: 'Cookie', cursive;
-    font-size:20px;
+    font-size:22px;
+    letter-spacing: 1.3px;
 
 }
 .btn-command:hover{

@@ -12,7 +12,7 @@ if(!props.endpoint){
 const {
     endpoint,
     method="post",
-    submitButtonText="valider",
+    submitButtonText="Valider",
     callback,
     validation,
     ...rest
@@ -58,7 +58,7 @@ const {
         
          {props.children}
 
-        <button type="submit" className="btn btn-outline-dark">{submitButtonText}</button>
+        <button type="submit" className="btn btn-command">{submitButtonText}</button>
     </form>
 </>
     );

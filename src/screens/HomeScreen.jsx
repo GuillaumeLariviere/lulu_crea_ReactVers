@@ -22,7 +22,11 @@ const [categories, setCategories] = useState([]);
 
 useEffect(()=>{
     const fetchData = async ()=> {
-        let data = category.from(await (await fetch("http://localhost:5000/category")).json());
+        let data = (await (await fetch("http://localhost:5000/category?with=Product_reference")).json());
+        // let data = (await( await fetch('http://localhost:5000/category?with=Product_reference')
+        // .then((resp) => resp.text())
+        // .then((text) => JSON.parse(text))));
+    
         setCategories(data);
     };
     fetchData().catch(console.error);

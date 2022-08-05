@@ -11,10 +11,12 @@ import LogAndRegScreen from './screens/LogAndRegScreen';
 import LogoutScreen from './screens/LogoutScreen';
 import AccountScreen from './screens/AccountScreen';
 import LuluCestQui from './screens/LuLuCestQui';
+import CommandProduct from './screens/CommandProduct';
 
 function App() {
 
   const {auth} = useContext(AuthContext);
+  
   return (
 <>
     <BrowserRouter>
@@ -24,6 +26,7 @@ function App() {
           <Route path ="/LuLuCestQui" element ={<LuluCestQui/>}/>
           <Route path="/productsReference" element={<ProductRefScreen/>}/>
           <Route path="/contact" element={<ContactScreen/>}/>
+          <Route path="/commandProduct/:id" element={<CommandProduct/>}/> 
           {auth.role === 0 && (
           <>
             <Route path ="/accountValidate" element={<AccountScreen toValidate/>}/>
@@ -33,6 +36,7 @@ function App() {
           )}
           {auth.role > 0 &&(
             <>
+              
               <Route path="/logout" element={<LogoutScreen/>}/>
               <Route path="/account" element={<AccountScreen yourAcc/>}/>
             </>
