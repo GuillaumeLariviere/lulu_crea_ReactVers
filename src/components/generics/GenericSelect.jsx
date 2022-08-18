@@ -1,3 +1,5 @@
+import CustomeOption from "../layouts/CustomeOption";
+
 const GenericSelect = (props) => {
     if(!props.name){
         throw new Error("props.name not set");
@@ -18,12 +20,12 @@ const GenericSelect = (props) => {
             <div {...rest}>
             <label for={name}>{labelText}</label>
                 <select id={name}>
-                  {props.isColor && ( 
-                    <span className="color-Select"></span>
-                  )} 
+                 
                     {listOption?.map((val)=>{
-                      return  <option value={val.name}>{val.name}</option>
-                    })}
+                      return(  <CustomeOption valeur = {val.name}
+                                            isColor = "color-Select"
+                      />
+                      ) })}
                 </select>
             </div>
         </>

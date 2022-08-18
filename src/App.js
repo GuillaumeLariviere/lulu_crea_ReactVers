@@ -27,14 +27,14 @@ function App() {
           <Route path="/productsReference" element={<ProductRefScreen/>}/>
           <Route path="/contact" element={<ContactScreen/>}/>
           <Route path="/commandProduct/:id" element={<CommandProduct/>}/> 
-          {auth.role === 0 && (
+          {auth.role === 1 && (
           <>
             <Route path ="/accountValidate" element={<AccountScreen toValidate/>}/>
             <Route path ="/login" element={<LogAndRegScreen isLogin/>}/>
             <Route path ="/register" element={<LogAndRegScreen isRegister/>}/>
           </>
           )}
-          {auth.role > 0 &&(
+          {auth.role > 1 &&(
             <>
               
               <Route path="/logout" element={<LogoutScreen/>}/>

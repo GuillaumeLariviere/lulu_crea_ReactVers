@@ -58,20 +58,12 @@ const CommandProduct = () =>{
             setColorList(colors);
             setMotifColorList(colorMotifs);
             seTextileColorList(colorTextiles);
-            
-       
-            // const images = product_image.from(
-            //     await(await fetch(`http://localhost:5000/product_image/?product_reference_id=${product.id}`)).json()
-            // );
-            //     const image = images.shift();
-            // setImage(image);
-            // const ProductOptions = await(await fetch(`http://localhost:5000/product/productOption/${id}?motif=Motif&textile=Texile`)).json();
-            // console.log(ProductOptions);
         }
         fetchData().catch(console.error)
     },[]);
     const listeOptions =["option1","option2"];
     const img=image.img_path;
+    console.log(img)
     return(
         <>
         <div className="content-fluid">

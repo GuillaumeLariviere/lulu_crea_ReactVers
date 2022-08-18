@@ -73,13 +73,13 @@ const CustomeNav = () =>{
                                 <li className="nav-item iconNav">
                                     <Link className="nav-link" to="/" data-bs-toggle="tooltip" data-bs-placement="bottom" title="votre panier"><FaShoppingBasket/></Link>
                                 </li>
-                                {auth.role === 0 &&(
+                                {auth.role === 1 &&(
                                 <li className="nav-item iconNav">
                                     <Link className="nav-link" to="/login" data-bs-toggle="tooltip" data-bs-placement="bottom-start" title="Se connecter"><FaSignInAlt/></Link>
                                 </li>
                                 )}
 
-                                {auth.role > 0 && (
+                                {auth.role > 1 && (
                                 <>
                                 <li className="nav-item dropdown">
                                     <span className="nav-link dropdown-toggle ConnectLogo" id="navbarDropdown " role="button" data-bs-toggle="dropdown" aria-expanded="false">
