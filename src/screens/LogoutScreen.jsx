@@ -9,7 +9,7 @@ const LogoutScreen = () => {
 
     useEffect(()=>{
         document.cookie = `auth=null;max-age=0`;
-        setAuth({ role: 0 });
+        setAuth({ role: 1 });
         navigate("/");
     },[])
 
