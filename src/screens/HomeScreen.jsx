@@ -2,7 +2,7 @@ import CustomeCard from "../components/layouts/CustomeCard";
 import "../style/CustomeCard-Caroussel.css"
 import { useEffect, useState } from "react";
 import CustomeCaroussel from "../components/layouts/CustomeCaroussel";
-import { category } from "../models/index";
+import { product } from "../models/index";
 
 const HomeScreen = () => {
    
@@ -18,21 +18,21 @@ function PairOrNot(itemNB){
   
 }
 
-const [categories, setCategories] = useState([]);
+const [products, setProducts] = useState([]);
 
 useEffect(()=>{
     const fetchData = async ()=> {
-        let data = (await (await fetch("http://localhost:5000/category?with=Product_reference")).json());
+        let data = (await (await fetch("http://localhost:5000/product?with=Product_image")).json());
         // let data = (await( await fetch('http://localhost:5000/category?with=Product_reference')
         // .then((resp) => resp.text())
         // .then((text) => JSON.parse(text))));
     
-        setCategories(data);
+        setProducts(data);
     };
     fetchData().catch(console.error);
 
 },[]);
-console.log(categories);
+console.log(products);
     return (
         <>
             <div className="row">
@@ -44,14 +44,14 @@ console.log(categories);
                 </div>
             </div>
             <div className="row">
-                {categories.map((category,i)=>{
+                {products.map((product,i)=>{
                 return (
-                <div className="col-12 col-sm-6 col-mg-5 col-lg-4"  key ={category.id}>
+                <div className="col-12 col-sm-6 col-mg-5 col-lg-4"  key ={product.id}>
                          <CustomeCard cardClass={'card bg-color'+PairOrNot(i)}
-                                 cardDesc ={category.description}
-                                 cardImg = {category.img_path}
-                                 cardText={category.name}
-                                 route ={"/productsdetails/"+category.id}
+                                 cardDesc ={product.description}
+                                 cardImg ={product.product_imageList[0].img_path}
+                                 cardText={product.name}
+                                 route ={"/productsdetails/"+product.id}
                                 />
                 </div>
                 );

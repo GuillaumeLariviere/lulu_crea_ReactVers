@@ -3,19 +3,19 @@ import { FaShoppingBasket,FaSignInAlt,FaUserAlt } from "react-icons/fa";
 import {Link} from "react-router-dom"
 import { AuthContext } from '../../contexts/authContext';
 import React, { useContext,useState,useEffect } from "react";
-import { category } from "../../models/index";
+import { product } from "../../models/index";
 
 
 
 
 
 const CustomeNav = () =>{
-    const [categories, setCategories] = useState([]);
+    const [products, setproducts] = useState([]);
 
     useEffect(()=>{
         const fetchData = async ()=> {
-            let data = category.from(await (await fetch("http://localhost:5000/category")).json());
-            setCategories(data);
+            let data = product.from(await (await fetch("http://localhost:5000/product")).json());
+            setproducts(data);
         };
         fetchData().catch(console.error);
     
@@ -50,12 +50,12 @@ const CustomeNav = () =>{
                                         Boutique
                                     </span>
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        {categories.map((category)=>{
+                                        {products.map((product)=>{
                                             return (
                                             <>
                                             <Link className ="dropMenuLink" to ="/">
                                              <div className="dropDownContentLink">
-                                                {category.name}
+                                                {product.name}
                                             </div>
                                             </Link>
                                             </>

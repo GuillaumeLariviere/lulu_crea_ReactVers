@@ -1,3 +1,4 @@
+
 const BaseModel = require("./baseModel.model");
 
 class Color extends BaseModel{
@@ -5,15 +6,12 @@ class Color extends BaseModel{
     constructor(props){
         super(props);
         this.assign(props);
-        this.hasMany("Product")
-        .hasManyThrough("Motif","Motif_color")
-        .hasManyThrough("Textile","Textile_color");
+        this.hasManyThrough("Police","Police_color")
+        .hasManyThrough("Textile","Textile_color")
     }
 
     name = "";
-    //may be code rgb //
-  
-
-
+    img_path="";
+    price =0;
 }
 module.exports =Color;
